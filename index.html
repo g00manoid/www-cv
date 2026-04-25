@@ -396,7 +396,7 @@ footer {
       const [p1, p2, domain, t1] = decodedString.split('~');
 
       const emailLink = document.getElementById("email");
-      emailLink.href = `mailto:${p1}.${p2}@${domain}`;
+      emailLink.href = `mailto:${p2}@${domain}`;
       emailLink.textContent = `${p2}@${domain}`;
 
       const tgLink = document.getElementById("phone");
