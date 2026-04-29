@@ -291,8 +291,18 @@
       h1 { font-size: 2.5rem; }
       section { padding: 1.5rem; }
       .item-header { flex-direction: column; gap: 5px; }
-      .skills-container { grid-template-columns: 1fr 1fr; }
+      .skills-container { 
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); 
+        gap: 0.8rem;
+      }
+      .skill-card {
+        padding: 0.8rem;
+      }
+      .skill-card span {
+        font-size: 0.8rem; /* Чуть уменьшаем шрифт, чтобы длинные слова влезали */
+      }
     }
+    
   </style>
 
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0fcaeb04aba54cf086d1c89bbb1f8d65"}'></script>
