@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="453a4121-0a1a-473e-86f6-6875a487b50f"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Linux Engineer | Professional CV</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Code+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* New Tech Color Palette */
+      --bg-dark: #0a0e14;
+      --card-bg: rgba(23, 32, 42, 0.7);
+      --primary: #00d2ff; /* Electric Blue */
+      --secondary: #9d50bb; /* Cyber Purple */
+      --accent: #ff0055; /* Neon Crimson */
+      --text-main: #e0e6ed;
+      --text-dim: #94a3b8;
+      --font-main: 'Montserrat', sans-serif;
+      --font-code: 'Source Code Pro', monospace;
+      --glass-border: rgba(255, 255, 255, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-main);
+      line-height: 1.6;
+      min-height: 100vh;
+      margin: 0;
+      /* Animated Grid Background */
+      background-image: 
+        linear-gradient(rgba(0, 210, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 210, 255, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      background-attachment: fixed;
+    }
+
+    /* Subtle glow effect in corners */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(circle at 0% 0%, rgba(0, 210, 255, 0.05) 0%, transparent 40%),
+                  radial-gradient(circle at 100% 100%, rgba(255, 0, 85, 0.05) 0%, transparent 40%);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    /* Header Styles */
+    header {
+      background: linear-gradient(to bottom, rgba(10, 14, 20, 0.3), var(--bg-dark)), url('/hdr.jpeg') no-repeat center center;
+      background-size: cover;
+      padding: 6rem 0 4rem;
+      text-align: center;
+      position: relative;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+      margin-bottom: 2rem;
+    }
+
+    .profile-img {
+      width: 220px;
+      height: 280px;
+      border-radius: 24px;
+      object-fit: cover;
+      border: 2px solid var(--primary);
+      box-shadow: 0 0 30px rgba(0, 210, 255, 0.3);
+      margin-bottom: 1.5rem;
+      transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .profile-img:hover {
+      transform: translateY(-10px) scale(1.02) rotate(1deg);
+      border-color: var(--accent);
+      box-shadow: 0 0 40px rgba(255, 0, 85, 0.4);
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      color: #fff;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      text-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
+    }
+
+    .tagline {
+      display: block; /* Changed from none to show it nicely */
+      font-size: 1.1rem;
+      color: var(--primary);
+      font-family: var(--font-code);
+      margin-top: 10px;
+      opacity: 0.8;
+    }
+
+    /* Section Styling */
+    section {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      padding: 3rem;
+      margin-bottom: 3rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    section:hover {
+      border-color: rgba(0, 210, 255, 0.3);
+      transform: translateY(-5px);
+    }
+
+    section::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--primary), transparent);
+      opacity: 0.5;
+    }
+
+    h2 {
+      color: #fff;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 30px;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    /* Experience & Education Items */
+    .experience-item, .education-item {
+      margin-bottom: 2.5rem;
+      padding-left: 1.5rem;
+      border-left: 1px solid var(--glass-border);
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 0.5rem;
+    }
+
+    .item-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .item-date {
+      font-family: var(--font-code);
+      color: var(--text-dim);
+      font-size: 0.9rem;
+    }
+
+    .item-subtitle {
+      color: var(--text-main);
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      color: var(--text-dim);
+    }
+
+    li {
+      margin-bottom: 0.8rem;
+    }
+
+    /* Skill Cards */
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .skill-card {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 1.2rem;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--glass-border);
+      transition: all 0.3s ease;
+    }
+
+    .skill-card:hover {
+      background: rgba(0, 210, 255, 0.1);
+      border-color: var(--primary);
+      transform: scale(1.05);
+    }
+
+    .skill-card i {
+      font-size: 1.5rem;
+      margin-right: 12px;
+    }
+
+    .skill-card span {
+      font-family: var(--font-code);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    /* Contact Section */
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.1rem;
+      color: var(--text-dim);
+      transition: color 0.3s ease;
+    }
+
+    .contact-item i {
+      color: var(--primary);
+    }
+
+    .contact-item a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .contact-item:hover {
+      color: var(--primary);
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(to top, #05070a, transparent), url('/ftr.jpeg') no-repeat center center;
+      background-size: cover;
+      padding: 4rem 0;
+      text-align: center;
+      clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+      margin-top: 5rem;
+    }
+
+    footer p {
+      color: var(--text-dim);
+      font-family: var(--font-code);
+      font-size: 0.9rem;
+    }
+
+    /* Skill Icons Colors Override */
+    .skill-linux i { color: #f1502f; }
+    .skill-python i { color: #3776ab; }
+    .skill-bash i { color: #4eaa25; }
+    .skill-debian i { color: #d70a53; }
+    .skill-proxmox i { color: #e57000; }
+    .skill-docker i { color: #2496ed; }
+    .skill-openwrt i { color: #2496ed; }
+    .skill-asterisk i { color: #1f88c7; }
+    .skill-tcpip i { color: #2a5c8d; }
+    .skill-ssh i { color: #a0a0a0; }
+    .skill-haproxy i { color: #1e509a; }
+    .skill-zabbix i { color: #d40000; }
+    .skill-ansible i { color: #ffffff; }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2.5rem; }
+      section { padding: 1.5rem; }
+      .item-header { flex-direction: column; gap: 5px; }
+      .skills-container { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0fcaeb04aba54cf086d1c89bbb1f8d65"}'></script>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <img src="/ava.gif" alt="Profile Photo" class="profile-img">
+      <h1 id="name"></h1>
+      <p class="tagline" id="tagline"></p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about">
+      <h2>Вас приветствует</h2>
+      <p id="about-text"></p>
+    </section>
+
+    <section id="skills">
+      <h2>Навыки</h2>
+      <div class="skills-container" id="skills-container">
+        <!-- Skills inserted by JS -->
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Опыт работы</h2>
+      <div class="experience-item">
+        <div class="item-header">
+          <span class="item-title">Старший инженер Linux</span>
+          <span class="item-date">Июнь 2021 — Декабрь 2025</span>
+        </div>
+        <div class="item-subtitle"><b>Холдинг</b></div>
+        <ul>
+          <li>Развертывание и сопровождение HA-кластеров Proxmox с использованием технологий RDMA, RoCE, NVMEoF, InfiniBand.</li>
+          <li>Поддержка облачных сервисов на VPS: SeaweedFS, Podman/Docker, HAProxy/Caddy, Bind9 и другие.</li>
+          <li>Обеспечение IP связности розничной и филиальной сетей, включая LTE с использованием продвинутых технологий туннелирования.</li>
+          <li>Опыт работы с оборудованием и технологиями: Cisco, Avaya, Mellanox/NVIDIA, HPE/Aruba, Mikrotik, Motorola, Huawei, Telrad.</li>
+          <li>Развертывание и сопровождение Asterisk IP-телефонии на 100+ абонентов (PJSIP, IVR, GSM-шлюзы, динамическая маршрутизация звонков, антиспам).</li>
+          <li>Полностью самописный dialplan без использования GUI.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <div class="item-header">
+          <span class="item-title">Старший системный администратор</span>
+          <span class="item-date">2010 — 2021</span>
+        </div>
+        <div class="item-subtitle"><b>ООО</b></div>
+        <ul>
+          <li>Развертывание и сопровождение кластеров CAT, включая настройку CAT Transit XV/NXT в среде WINE.</li>
+          <li>Настройка защищенного доступа через SSH с туннелированием FreeRDP для удобной и безопасной работы фрилансеров.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Образование</h2>
+      <div class="education-item">
+        <div class="item-header">
+          <span class="item-date"></span>
+        </div>
+        <div class="item-subtitle">Поморский государственный университет им. М.В. Ломоносова</div>
+        <p>Прикладная математика и информатика</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Контактная информация</h2>
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="" id="email"></a>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-comment-alt"></i>
+          <a href="" id="phone"></a>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span id="location"></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="current-year"></span> All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script>
+    const content = {
+      personalInfo: {
+        name: "Олег",
+        title: "Инженер Linux",
+        about: "Linux специалист с более чем десятилетним опытом в администрировании, системной интеграции и поддержке серверов, облачных решений и автоматизации процессов. Привержен созданию надежных и масштабируемых систем. Обладает обширными навыками решения проблем.",
+        location: "Россия",
+      },
+      skills: [
+        { name: "Debian Linux", icon: "fab fa-linux", class: "skill-debian" },
+        { name: "Python", icon: "fab fa-python", class: "skill-python" },
+        { name: "Bash", icon: "fas fa-terminal", class: "skill-bash" },
+        { name: "Деплой по IPMI", icon: "fas fa-server", class: "" },
+        { name: "Английский B2", icon: "fas fa-language", class: "" },
+        { name: "OpenWrt", icon: "fas fa-wifi", class: "skill-openwrt" },
+        { name: "Proxmox", icon: "fas fa-cube", class: "skill-proxmox" },
+        { name: "Docker", icon: "fab fa-docker", class: "skill-docker" },
+        { name: "Asterisk", icon: "fas fa-phone-volume", class: "skill-asterisk" },
+        { name: "TCP/IP", icon: "fas fa-network-wired", class: "skill-tcpip" },
+        { name: "SSH", icon: "fas fa-key", class: "skill-ssh" },
+        { name: "ZFS", icon: "fas fa-hdd", class: "skill-bash" },
+        { name: "SMTP", icon: "fas fa-envelope", class: "" },
+        { name: "Caddy", icon: "fas fa-random", class: "skill-haproxy" },
+        { name: "Zabbix", icon: "fas fa-chart-line", class: "skill-zabbix" },
+        { name: "Ansible", icon: "fas fa-robot", class: "skill-ansible" }
+      ],
+    };
+
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('name').textContent = content.personalInfo.name;
+      document.getElementById('tagline').textContent = content.personalInfo.title;
+      document.getElementById('about-text').textContent = content.personalInfo.about;
+      document.getElementById('location').textContent = content.personalInfo.location;
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+
+      const base64String = "ZnJvbXdlYn5yMDB0fmNnMjkucnV+ZGFkNGFlYzU=";
+      const decodedString = atob(base64String);
+      const [p1, p2, domain, t1] = decodedString.split('~');
+      const emailLink = document.getElementById("email");
+      emailLink.href = `mailto:${p2}@${domain}`;
+      emailLink.textContent = `${p2}@${domain}`;
+
+      const tgLink = document.getElementById("phone");
+      tgLink.href = `https://t.me/${t1}`;
+      tgLink.textContent = `@${t1}`;
+
+      const skillsContainer = document.getElementById('skills-container');
+      content.skills.forEach(skill => {
+        const skillCard = document.createElement('div');
+        skillCard.className = `skill-card ${skill.class}`;
+        skillCard.innerHTML = `<i class="${skill.icon}"></i><span>${skill.name}</span>`;
+        skillsContainer.appendChild(skillCard);
+      });
+    });
+  </script>
+</body>
+</html>
+```
