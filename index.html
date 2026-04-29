@@ -93,8 +93,8 @@
       font-size: 3.5rem;
       color: #fff;
       margin: 0;
-//      text-transform: uppercase;
-//      letter-spacing: 4px;
+/*      text-transform: uppercase;
+      letter-spacing: 4px; */
       text-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
     }
 
@@ -226,13 +226,37 @@
       font-weight: 500;
     }
 
+
+   .contact-info {
+      display: flex;
+      flex-direction: column; /* Всегда в столбик */
+      gap: 1.5rem;
+      padding-left: 1.5rem; /* Отступ для линии */
+      border-left: 1px solid var(--glass-border); /* Такая же линия, как в опыте */
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 1.1rem;
+      color: var(--text-main); /* Сделаем текст ярче, как в заголовках предметов */
+      transition: all 0.3s ease;
+    }
+
+    .contact-item i {
+      color: var(--primary);
+      width: 20px; /* Фиксированная ширина иконки для ровного выравнивания текста */
+      text-align: center;
+    }
+    
     /* Contact Section */
-    .contact-info {
+/*    .contact-info {
       display: flex;
       flex-wrap: wrap;
       gap: 2rem;
       justify-content: center;
-    }
+    } 
 
     .contact-item {
       display: flex;
@@ -241,11 +265,11 @@
       font-size: 1.1rem;
       color: var(--text-dim);
       transition: color 0.3s ease;
-    }
+    } 
 
     .contact-item i {
       color: var(--primary);
-    }
+    } */
 
     .contact-item a {
       color: inherit;
@@ -299,7 +323,7 @@
         padding: 0.8rem;
       }
       .skill-card span {
-        font-size: 0.8rem; /* Чуть уменьшаем шрифт, чтобы длинные слова влезали */
+        font-size: 0.8rem; 
       }
     }
     
@@ -373,7 +397,7 @@
     </section>
 
     <section id="contact">
-      <h2>Контактная информация</h2>
+      <h2>Контакты</h2>
       <div class="contact-info">
         <div class="contact-item">
           <i class="fas fa-envelope"></i>
